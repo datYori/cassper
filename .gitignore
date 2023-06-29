@@ -11,3 +11,5 @@ project/project/
 .idea_modules/
 .keys/
 .logs/
+secretkey.pgp
+key.pgp
