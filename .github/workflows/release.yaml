@@ -4,7 +4,6 @@ on:
   push:
     branches:
       - "master"
-    tags: ["*"]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -21,7 +20,7 @@ jobs:
         distribution: temurin
         java-version: 11
         cache: sbt
-    - run: sbt ci-release
+    - run: sbt compile ci-release
       env:
         SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
         SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
