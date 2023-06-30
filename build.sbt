@@ -1,4 +1,4 @@
-scalaVersion := "2.11.12"
+scalaVersion := "2.12.15"
 
 inThisBuild(List(
   organization := "io.github.datYori",
@@ -17,10 +17,6 @@ inThisBuild(List(
 // cassper
 name := "cassper"
 description := "Schema migrations tool for `Apache Cassandra` that can be used with `JVM` applications."
-
-// disable publish with scala version, otherwise artifact name will include scala version 
-// e.g cassper_2.11
-crossPaths := false
 
 // other library dependencies
 libraryDependencies ++= {
