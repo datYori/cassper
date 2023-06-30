@@ -3,7 +3,8 @@ on:
   workflow_dispatch:
   push:
     branches:
-      - "master"
+      - master
+      - main
     tags:
       - "v*.*.*"
 jobs:
@@ -22,7 +23,7 @@ jobs:
         distribution: temurin
         java-version: 11
         cache: sbt
-    - run: sbt compile ci-release
+    - run: sbt ci-release
       env:
         SONATYPE_USERNAME: ${{ secrets.SONATYPE_USERNAME }}
         SONATYPE_PASSWORD: ${{ secrets.SONATYPE_PASSWORD }}
